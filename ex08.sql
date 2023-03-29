@@ -20,6 +20,7 @@ select deptno, job, sum(sal) from emp group by deptno, job;
 -- 합계가 2000 이상.
 -- select deptno, job, sum(sal) from emp where sum(sal) >= 2000 group by deptno, job; -> 에러 발생 where 다음에는 group 함수를 사용할 수 없음.
 select deptno, job, sum(sal) from emp group by deptno, job having sum(sal) >= 2000;
+select deptno, job, sum(sal) from emp where sal >= 2000 group by deptno, job;
 
 --부서별 인원수 6명 이상인 부서번호, 인원 수 출력
 select deptno, count(ename) from emp group by deptno having count(ename) >= 6;
