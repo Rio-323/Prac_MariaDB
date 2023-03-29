@@ -24,3 +24,12 @@ select deptno, job, sum(sal) from emp where sal >= 2000 group by deptno, job;
 
 --부서별 인원수 6명 이상인 부서번호, 인원 수 출력
 select deptno, count(ename) from emp group by deptno having count(ename) >= 6;
+
+-- scott의 급여보다 많은 사원 정보 출력
+--     1. scott 급여
+--     2. 그 급여보다 많은 사원
+-- select sal from emp where ename = "scott";
+-- select ename, sal from emp where sal > ?
+
+-- ->
+select ename, sal from emp where sal > (select sal from emp where ename = "scott");
