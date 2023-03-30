@@ -19,3 +19,8 @@ alter table emp_alter drop work; -> 컬럼 삭제(데이터가 있어도 삭제)
 
 alter table emp_alter2 rename emp_alter3; -> 테이블 이름 변경
 rename table emp_alter3 to emp_alter2; -> 테이블 명을 바꾸는 다른 방법
+
+show create table emp_alter; -> sql 구문으로 emp_alter 코드를 보여줌.
+show create table emp_alter\g;
+
+show table status;
