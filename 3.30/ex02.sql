@@ -16,3 +16,6 @@ emp_dept 테이블을 만들기
     create table emp_dept as 
 
     select e.empno, e.ename, d.deptno, d.dname, d.loc from emp e inner join dept d on e.deptno = d.deptno;
+
+테이블의 데이터를 가져오지 않고 테이블의 뼈대만 가져오는 방법
+create table empty_emp as select * from emp where 1 != 1;
