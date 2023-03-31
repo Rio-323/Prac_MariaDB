@@ -1,0 +1,1 @@
+select e.empno, e.ename, e.deptno, d.dname, d.loc from (select * from emp where deptno in (10, 20)) e inner join dept d on e.deptno = d.deptno;
