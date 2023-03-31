@@ -28,3 +28,14 @@ create table orderdetail (
     qty int(5),
     cost int(8)
 );
+
+primary key
+alter table customers add constraint primary key (cno);
+alter table orders add constraint primary key (orderno);
+alter table products add constraint primary key (pno);
+alter table orderdetail add constraint primary key (orderno, pno);
+
+foreign key
+alter table orders add constraint foreign key(cno) references customers(cno);
+alter table orderdetail add constraint foreign key(orderno) references orders(orderno);
+alter table orderdetail add constraint foreign key(pno) references products(pno);
