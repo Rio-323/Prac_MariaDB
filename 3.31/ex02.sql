@@ -31,3 +31,5 @@ create table emp_c (
 alter table emp_c add constraint foreign key(deptno) references dept_c(deptno);
 
 alter table emp_c drop foreign key emp_c_ibfk_1;
+
+alter table emp_c drop index deptno;
