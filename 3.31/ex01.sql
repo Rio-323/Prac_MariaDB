@@ -43,3 +43,25 @@ insert into emp_f values(2000, "박문수", "clerk", 10);
 delete from emp_f where empno = 1000;
 
 delete from dept_p; -> 에러 발생 참조하는 테이블이 있기 때문에.
+
+drop table dept_p; -> 에러 발생 참조하는 테이블이 있기 때문에. -> 참조하는 테이블 부터 지워야 함.
+
+두개의 컬럼 -> 집합 -> 복합 키
+    - unique, primary key
+
+create table order_c (
+    pcode int(4),
+    ccode int(4),
+    orderdate date,
+    etc varchar(20),
+    constraint unique(pcode, ccode)
+);
+
+create table order_c2 (
+    pcode int(4),
+    ccode int(4),
+    orderdate date,
+    etc varchar(20),
+    constraint primary key(pcode, ccode)
+);
+
