@@ -24,7 +24,7 @@ create table customers (
 
 create table orderdetail (
     orderno varchar(10),
-    pno varchar(10),
+    pno varchar(5),
     qty int(5),
     cost int(8)
 );

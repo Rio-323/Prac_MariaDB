@@ -24,10 +24,11 @@ create table customers (
 );
 
 create table orderdetail (
-    orderno varchar(10) primary key,
-    pno varchar(10) primary key,
+    orderno varchar(10),
+    pno varchar(5),
     qty int(5),
     cost int(8),
+    PRIMARY KEY(orderno, pno),
     constraint foreign key(pno) references products(pno),
     constraint foreign key(orderno) references orders(orderno)
 );
