@@ -12,3 +12,6 @@ mysqldump -u root -p sample emp > dump_emp.sql
 
  drop database sample;
 
+----------------------------------------
+자바 프로그램과 연결하는 방법
+JDBC
