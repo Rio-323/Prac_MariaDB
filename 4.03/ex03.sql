@@ -6,7 +6,9 @@ mysqldump -u root -p > dump_all.sql
 mysqldump -u root -p sample > dump_all.sql
 
 특정 테이블만 백업(부분 백업)
-mysqldump -u root -p sample emp > dump_all.sql
+mysqldump -u root -p sample emp > dump_emp.sql
 
- mysql -u root -p sample < dump_all.sql
+ mysql -u root -p sample < dump_emp.sql
+
+ drop database sample;
 
