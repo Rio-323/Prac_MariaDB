@@ -1,1 +1,12 @@
 데이터베이스에 대한 백업 / 복원
+mysqldump - 복원용 스크립트 생성.
+csv
+
+mysqldump -u root -p > dump_all.sql
+mysqldump -u root -p sample > dump_all.sql
+
+특정 테이블만 백업(부분 백업)
+mysqldump -u root -p sample emp > dump_all.sql
+
+ mysql -u root -p sample < dump_all.sql
+
