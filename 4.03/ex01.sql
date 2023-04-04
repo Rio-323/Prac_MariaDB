@@ -38,6 +38,7 @@ drop table testtbl;
 권한 회수
 revoke create on tester1db. * from tester1@localhost;
 -------------------------------------------------------
+grant all privileges on *. * to project@localhost;
 
 grant all privileges on tester1db. * to tester1@localhost;(-> 모든 권한을 주는 것)
 drop / create / alter 다 가능 단 다른 데이터베이스에서는 권한이 없음.
