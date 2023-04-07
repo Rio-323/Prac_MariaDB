@@ -12,6 +12,9 @@ mysqldump -u root -p sample emp > dump_emp.sql
 
  drop database sample;
 
+
+ select concat(ename, '님의 연봉은', (sal * 12) + ifnull(comm,0) , '입니다.') '연봉' from emp where deptno = 10;
+
 ----------------------------------------
 자바 프로그램과 연결하는 방법
 JDBC
